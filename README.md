@@ -1,0 +1,1 @@
+Este repositório é dedicado ao compartilhamento de diversos projetos de robótica. Aqui, você encontrará tutoriais, códigos, esquemas e recursos voltados para o desenvolvimento de projetos como automatizações, sensores, motores e controladores. O objetivo é colaborar com a comunidade, promovendo o aprendizado e a inovação na área de robótica. Contribuições são bem-vindas!
