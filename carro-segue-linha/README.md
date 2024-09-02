@@ -1,10 +1,10 @@
-------------------------Programação------------------------
+------------------------------------------------Programação------------------------------------------------
 
 A programação de exemplo tem como propósito fazer o robô identificar a cor do chão, ativando e desativando os motores de acordo com a variação de cor, possibilitando que o robô possa seguir a linha em qualquer formato desejado.
 
 No início da programação é dado novos nomes para cada porta utilizada para facilitar o entendimento da programação, depois ativa os sensores para iniciar o processo de seguir a linha, controlando a velocidade e direção dos motores.
 
-------------------------Preparação------------------------
+------------------------------------------------Preparação------------------------------------------------
 
 -	Conecte um jumper na porta cinco volts do Arduino na trilha de alimentação positiva da protoboard, onde está sinalizado com o sinal de mais (+);
 -	Conecte um jumper na porta GND do Arduino na trilha de alimentação negativa da protoboard, onde está sinalizado com o sinal de menos (-);
@@ -22,4 +22,4 @@ No início da programação é dado novos nomes para cada porta utilizada para f
 
 Para alimentar o Arduino com bateria basta conectar os polos da bateria nas trilhas da protoboard, respeitando o lado positivo e negativo para não danificar nenhum componente.
 
-------------CODIGO FEITO NA IDE-ARDUINO------------
+------------------------------------CODIGO FEITO NA IDE-ARDUINO------------------------------------
