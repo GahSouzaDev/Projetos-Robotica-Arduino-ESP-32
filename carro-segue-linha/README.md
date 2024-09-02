@@ -24,4 +24,4 @@ Para alimentar o Arduino com bateria basta conectar os polos da bateria nas tril
 
 ------------------------------------CODIGO FEITO NA IDE-ARDUINO------------------------------------
 
-------------------------------------------------[Link para ver o projeto funcionando](https://www.instagram.com/p/C5VY6kgOXce/)------------------------------------------------
+-------------------------------------------[Link para ver o projeto funcionando](https://www.instagram.com/p/C5VY6kgOXce/)-------------------------------------------
