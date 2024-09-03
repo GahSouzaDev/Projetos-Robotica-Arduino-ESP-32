@@ -1,4 +1,4 @@
-----------------------------------Projeto IoT - Controle via HTTP com ESP32------------------------------------
+--------------------------------Projeto IoT - Controle via HTTP com ESP32------------------------------------
 ------------------------------------[Link para ver o projeto funcionando](https://www.linkedin.com/posts/emerson-gabriel-souza-558841324_iot-arduino-esp32-activity-7236799599795941376-kkUH?utm_source=share&utm_medium=member_desktop)------------------------------------
 
 Este projeto IoT permite controlar um ESP32 remotamente utilizando um aplicativo desenvolvido no App Inventor. O app envia comandos através de uma interface HTTP, que são recebidos e processados pelo ESP32, permitindo o controle de dispositivos conectados, como relés, motores, LEDs, entre outros.
