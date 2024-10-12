@@ -1,34 +1,27 @@
 #include <WiFi.h>
 
 // Nome (SSID) e senha do ponto de acesso
-const char* ssid = "MeuESP32";    // Nome do ponto de acesso
-const char* password = "12345678"; // Senha do ponto de acesso
+const char* ssid = "MeuESP32";
+const char* password = "12345678";
 
 // Servidor web na porta 80
 WiFiServer server(80);
 
 void setup() {
-  Serial.begin(115200); // Aumentar a velocidade da comunicação serial para 115200
-  
-  // Define a frequência máxima da CPU (240 MHz)
-  setCpuFrequencyMhz(240);
+  Serial.begin(115200);
+  setCpuFrequencyMhz(240); // Define a frequência máxima da CPU (240 MHz)
 
-  // Configura o ESP32 como ponto de acesso
-  WiFi.softAP(ssid, password);
+  WiFi.softAP(ssid, password); // Configura o ESP32 como ponto de acesso
   Serial.println("Ponto de acesso criado");
-
-  // Inicia o servidor web
-  server.begin();
+  
+  server.begin(); // Inicia o servidor web
   Serial.println("Servidor web iniciado");
   Serial.println("Acesse http://192.168.4.1");
 }
 
 void loop() {
-  // Verifica se há um cliente conectado
-  WiFiClient client = server.available();
-  if (!client) {
-    return; // Se não há cliente, retorna imediatamente para evitar atrasos
-  }
+  WiFiClient client = server.available(); // Verifica se há um cliente conectado
+  if (!client) return; // Se não há cliente, retorna imediatamente
 
   Serial.println("Novo cliente conectado.");
   String request = client.readStringUntil('\r');
@@ -76,7 +69,6 @@ void loop() {
   client.println("</body>");
   client.println("</html>");
 
-  // Fecha a conexão com o cliente
-  client.stop();
+  client.stop(); // Fecha a conexão com o cliente
   Serial.println("Cliente desconectado.");
 }
