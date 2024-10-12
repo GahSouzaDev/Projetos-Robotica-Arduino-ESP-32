@@ -2,7 +2,7 @@
 
 ## Descoberta Incrível!
 
-Você sabia que é possível compilar HTML, CSS e JavaScript diretamente no seu ESP32 ou Arduino? Isso mesmo! Agora, é possível criar interfaces web personalizadas para controlar seus projetos de forma intuitiva, sem a necessidade de aplicativos extras.
+Você sabia que é possível compilar HTML, CSS e JavaScript diretamente no seu ESP32 ou Arduino? Isso mesmo! É possível criar interfaces web personalizadas para controlar seus projetos de forma intuitiva, sem a necessidade de aplicativos extras.
 
 Imagine criar um painel de controle completo, acessível por qualquer navegador, para gerenciar seus dispositivos IoT. Essa funcionalidade abre um mundo de possibilidades para projetos mais interativos e acessíveis.
 
