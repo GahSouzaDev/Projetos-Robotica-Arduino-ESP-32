@@ -8,21 +8,21 @@ const char* password = "12345678";
 WiFiServer server(80);
 
 // Estados dos dispositivos
-bool LuzLigada = false; 
-bool JanelaAberta = false; 
+bool LuzLigada = false;
+bool JanelaAberta = false;
 
 void setup() {
   Serial.begin(115200);
   setCpuFrequencyMhz(240); // Define a frequência máxima da CPU (240 MHz)
   WiFi.softAP(ssid, password); // Configura o ESP32 como ponto de acesso
   Serial.println("Ponto de acesso criado");
-  
+
   server.begin(); // Inicia o servidor web
   Serial.println("Servidor web iniciado");
   Serial.println("Acesse http://192.168.4.1");
-  pinMode(2,OUTPUT);
-  digitalWrite(2,LOW);
-  
+  pinMode(2, OUTPUT);
+  digitalWrite(2, LOW);
+
 }
 
 void loop() {
@@ -50,7 +50,7 @@ void loop() {
   } else {
     inicio(client); // Chama a função que serve a página inicial
   }
-  
+
   client.stop(); // Fecha a conexão com o cliente
 }
 
@@ -86,7 +86,7 @@ void inicio(WiFiClient& client) {
   client.println("  .button { font-size: 20px; padding: 15px 30px; }");
   client.println("  .text-autoria { font-size: 15px; }");
   client.println("}");
-  
+
   client.println("</style>");
   client.println("</head>");
   client.println("<body>");
@@ -133,11 +133,11 @@ void sala(WiFiClient& client) {
   client.println("  .atualizar { font-size: 20px; }");
   client.println("  .voltar { font-size: 20px;  }");
   client.println("  .div { width: auto; height: auto; padding: 10px; }");
-  client.println("  .text-autoria { font-size: 18px; }");  
+  client.println("  .text-autoria { font-size: 18px; }");
   // Estilo para o botão atualizar e outros elementos
   client.println(".text-atualizar { font-size:15 px; color: #808080;  }");
   client.println(".atualizar { background-color: #90EE90; color: #000; }");
-  client.println(".voltar { background-color: #FFD700; color: #000; }");  
+  client.println(".voltar { background-color: #FFD700; color: #000; }");
   // Definindo a div com borda e margens
   client.println(".div { border: 1px solid #000; margin-top: 100px;  margin: 0 auto; padding: 20px; background-color: #fff; }");
   // Texto de direitos autorais
@@ -151,13 +151,13 @@ void sala(WiFiClient& client) {
   // Estilo para o botão atualizar e outros elementos
   client.println(".text-atualizar { font-size: 10px; color: #808080;  }");
   client.println(".atualizar { background-color: #90EE90; color: #000; width: 800px;}");
-  client.println(".voltar { background-color: #FFD700; color: #000; width: 800px;}");  
+  client.println(".voltar { background-color: #FFD700; color: #000; width: 800px;}");
   // Definindo a div com borda e margens
   client.println(".div { border: 1px solid #000;  width: 800px; height: auto; margin: 0 auto; padding: 10px; background-color: #fff; }");
   // Texto de direitos autorais
   client.println(".text-autoria { font-size: 10px; color: #808080; ");
   client.println("}");
-  
+
   client.println("</style>");
   client.println("</head>");
   client.println("<body>");
@@ -169,12 +169,12 @@ void sala(WiFiClient& client) {
 
   // Mostra o estado atual da luz
   if (LuzLigada) {
-    digitalWrite(2,HIGH);
+    digitalWrite(2, HIGH);
     client.println("<p>Status: <strong>Luz Ligada</strong></p>");
     client.println("<button class=\"button ligar-on\">Ligar Luz</button>");
     client.println("<button class=\"button desligar\" onclick=\"location.href='/desligar-luz'\">Desligar Luz</button>");
   } else {
-    digitalWrite(2,LOW);
+    digitalWrite(2, LOW);
     client.println("<p>Status: <strong>Luz Desligada</strong></p>");
     client.println("<button class=\"button ligar\" onclick=\"location.href='/ligar-luz'\">Ligar Luz</button>");
     client.println("<button class=\"button desligar-on\">Desligar Luz</button>");
